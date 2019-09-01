@@ -1,0 +1,9 @@
+{
+  "name": "litsy",
+  "version": "0.1.1",
+  "description": "litsy is a minimal node web data state machine",
+  "main": "dist/bundle.js",
+  "repository": "git@github.com:MoTheNerd/litsy.git",
+  "author": "Mohammad Al-Ahdal <mo@mohammad.dev>",
+  "license": "MIT"
+}
