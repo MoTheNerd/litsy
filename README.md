@@ -67,6 +67,8 @@ myStore.setState(stateName, value);
 ```
 setting a state **always** notifies subscribers and saves the state to either localStorage (if data is persistent) or sessionStorage (in the case that the store is a non-persistent store).
 
+### Getting:
+
 getting a state is easy as well, all you have to do is
 ```
 let result = myStore.getState(stateName);
