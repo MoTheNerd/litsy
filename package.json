@@ -1,9 +1,25 @@
 {
   "name": "litsy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "litsy is a minimal node web data state machine",
   "main": "dist/bundle.js",
   "repository": "git@github.com:MoTheNerd/litsy.git",
   "author": "Mohammad Al-Ahdal <mo@mohammad.dev>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.19.0",
+    "immutable": "^4.0.0-rc.12",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.6.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "start": "webpack -p --watch",
+    "prepublishOnly": "webpack -p",
+    "build": "webpack -p"
+  }
 }
