@@ -1,6 +1,6 @@
 {
   "name": "litsy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "litsy is a minimal node web data state machine",
   "main": "dist/bundle.js",
   "repository": "git@github.com:MoTheNerd/litsy.git",
