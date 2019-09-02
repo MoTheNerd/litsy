@@ -19,7 +19,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.git_token }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: yarn version --patch
+#       - run: yarn version --patch
       - run: git --help
   publish-npm:
     needs: ver-increment
