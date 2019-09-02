@@ -10,6 +10,7 @@ on:
 
 jobs:
   publish-npm:
+    needs: ver-increment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
