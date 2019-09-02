@@ -18,9 +18,10 @@ jobs:
         uses: elgohr/Github-Hub-Action@1.2
         env:
           GITHUB_TOKEN: ${{ secrets.git_token }}
+      - run: yarn version --patch
+        env: 
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-#       - run: yarn version --patch
-      - run: git --help
+      - run: git push -u origin master
   publish-npm:
     needs: ver-increment
     runs-on: ubuntu-latest
