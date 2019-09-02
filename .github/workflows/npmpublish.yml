@@ -14,12 +14,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - name: Commit updated Package version
-        uses: elgohr/Github-Hub-Action@1.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.git_token }}
       - run: yarn version --patch
         env: 
+          GITHUB_TOKEN: ${{ secrets.git_token }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: git push -u origin master
   publish-npm:
