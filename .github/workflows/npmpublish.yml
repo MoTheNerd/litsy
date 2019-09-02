@@ -27,7 +27,7 @@ jobs:
           EMAIL: ${{ secrets.author_email }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: git status
-      - run: git push -u origin master
+      # - run: git push -u origin master
   publish-npm:
     needs: ver-increment
     runs-on: ubuntu-latest
