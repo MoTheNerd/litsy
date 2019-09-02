@@ -20,7 +20,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.git_token }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: yarn version --patch
-      - run: git push -u origin master
+      - run: git --help
   publish-npm:
     needs: ver-increment
     runs-on: ubuntu-latest
