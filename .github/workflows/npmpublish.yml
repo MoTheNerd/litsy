@@ -17,6 +17,9 @@ jobs:
       - run: yarn version --patch
         env: 
           GITHUB_TOKEN: ${{ secrets.git_token }}
+          GIT_AUTHOR_NAME: ${{ secrets.author_name }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.author_email }}
+          EMAIL: ${{ secrets.author_email }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: git push -u origin master
   publish-npm:
