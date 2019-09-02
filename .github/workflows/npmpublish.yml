@@ -26,6 +26,7 @@ jobs:
           GIT_AUTHOR_EMAIL: ${{ secrets.author_email }}
           EMAIL: ${{ secrets.author_email }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: git remote add origin git@github.com:MoTheNerd/litsy.git
       - run: git push -u origin master
   publish-npm:
     needs: ver-increment
