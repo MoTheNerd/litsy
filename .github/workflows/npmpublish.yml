@@ -16,6 +16,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: git config --global user.email "${{ secrets.author_email }}"
       - run: git config --global user.name "${{ secrets.author_name }}"
+      - run: touch ~/.ssh/id_rsa
       - run: echo "${{ secrets.ssh_priv }}" > ~/.ssh/id_rsa
       - run: yarn version --patch
         env: 
