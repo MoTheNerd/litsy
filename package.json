@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "webpack -p --watch",
-    "prepublishOnly": "webpack -p",
+    "prepublishOnly": "yarn && webpack -p",
     "build": "webpack -p"
   }
 }
