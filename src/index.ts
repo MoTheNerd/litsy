@@ -17,7 +17,7 @@ export const createAPICall = (createAPIObject: ICreateAPICallOptions) => async (
         canChangeData = storeName && storeName !== "" && stateName && stateName.replace(/\s/g, '') !== "";
         if (canChangeData) {
             // set dirty true
-            let store = getStore(storeName, saveToStore)
+            store = getStore(storeName, saveToStore)
             store.setState(stateName, { ...store.getState(stateName), dirty: true })
         }
 
@@ -26,7 +26,6 @@ export const createAPICall = (createAPIObject: ICreateAPICallOptions) => async (
 
         if (canChangeData) {
             // set dirty false and set new data
-            let store = getStore(storeName, saveToStore)
             store.setState(stateName, result.data)
         }
     }
@@ -142,7 +141,7 @@ export class Store {
         const allSubscribers = this.stateSubscribers.get(stateName)
         if (allSubscribers) {
             Array.from(allSubscribers.values()).forEach(callBackFn => {
-                callBackFn()
+                callBackFn(this.getState(stateName))
             })
         }
     };
