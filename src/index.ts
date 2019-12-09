@@ -21,8 +21,19 @@ export const createAPICall = (createAPIObject: ICreateAPICallOptions) => async (
             store.setState(stateName, { ...store.getState(stateName), dirty: true })
         }
 
+        let config = {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, HEAD, DELETE'
+            }
+        }
         // @ts-ignore
-        let result = await axios[method](`${url}`, method === 'get' || method === 'delete' || method === 'head' ? undefined : bodyData);
+        let result = await axios[method](
+            `${url}`,
+            method === 'get' || method === 'delete' || method === 'head' ? config : bodyData,
+            method === 'get' || method === 'delete' || method === 'head' ? undefined : config,
+            );
 
         if (canChangeData) {
             // set dirty false and set new data
