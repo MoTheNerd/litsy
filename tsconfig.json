@@ -5,9 +5,9 @@
     "lib": ["dom", "esnext"],
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true
   },
   "exclude": ["node_modules"]
 }

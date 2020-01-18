@@ -1,8 +1,9 @@
 {
   "name": "litsy",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "litsy is a minimal node web data state machine",
-  "main": "dist/bundle.js",
+  "main": "dist/litsy.js",
+  "typings": "dist/index.d.ts",
   "repository": "git@github.com:MoTheNerd/litsy.git",
   "author": "Mohammad Al-Ahdal <mo@mohammad.dev>",
   "license": "MIT",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "webpack -p --watch",
-    "prepublishOnly": "yarn && webpack -p && cp src/index.d.ts dist",
+    "prepublishOnly": "yarn && webpack -p",
     "build": "webpack -p"
   }
 }

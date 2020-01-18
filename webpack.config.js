@@ -1,7 +1,9 @@
 const path = require('path');
 
 module.exports = {
-    entry: ['./src/index.ts'],
+    entry: {
+        "litsy" : "./src/index.ts"
+    },
     devtool: "source-map",
     module: {
         rules: [
@@ -21,8 +23,9 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
+        library: "litsy",
         libraryTarget: 'umd'
     }
 }
