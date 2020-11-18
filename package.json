@@ -15,8 +15,8 @@
     "ts-loader": "^6.0.4",
     "tsc": "^1.20150623.0",
     "typescript": "^3.6.2",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^5.1.1",
+    "webpack-cli": "^4.0.0"
   },
   "scripts": {
     "start": "webpack -p --watch",
